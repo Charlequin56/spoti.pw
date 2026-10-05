@@ -47,6 +47,9 @@ jobs:
 
       - run: make release
 
+      - name: Force version 0.50.0
+        run: echo "0.50.0" > version.txt
+
       - uses: actions/upload-artifact@v5
         if: inputs.upload_method != 'filebin'
         with:
